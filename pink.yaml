@@ -1,4 +1,3 @@
-
 global:
     language: en
     language_text_source: |
@@ -44,7 +43,7 @@ layers:
             draw:
                 polygons:
                     order: global.sort_rank
-                    color: '#3A3C3E'
+                    color: '#F2DCEF'
         rivers:
             filter:
             - $geometry: line
@@ -57,7 +56,7 @@ layers:
                         order: global.sort_rank
                         size: 12.8
                         priority: 100
-                        fill: '#999999'
+                        fill: '#D4BABA'
                         stroke: {color: [0.078, 0.078, 0.078, 0.50], width: 2
                         }
         lakes:
@@ -74,8 +73,8 @@ layers:
                         order: global.sort_rank
                         size: 12.8
                         priority: 100
-                        fill: '#999999'
-                        stroke: {color: [0.078, 0.078, 0.078, 0.50], width: 2
+                        fill: '#D4BABA'
+                        stroke: {color: [40.078, 0.078, 0.078, 0.50], width: 2
                         }
 
 
@@ -85,7 +84,7 @@ layers:
             function() { return feature.kind.startsWith ('urban');}
         draw:
             polygons:
-                color:  '#525556'
+                color:  '#A88FA8'
                 order: global.sort_rank
     urban_area:
         data: { source: omv , layer: landuse}
@@ -95,7 +94,7 @@ layers:
             - kind: urban_area
         draw:
             polygons:
-                color: '#525556'
+                color: '#A88FA8'
                 order: global.sort_rank
 
     park_national:
@@ -106,7 +105,7 @@ layers:
             - kind: national_park
         draw:
             polygons:
-                color: '#454849'
+                color: '#A88FA8'
                 order: global.sort_rank
     park:
         data: { source: omv , layer: landuse}
@@ -129,7 +128,7 @@ layers:
                     - protected_area
         draw:
             polygons:
-                color: '#474A4B'
+                color: '#A88FA8'
                 order: global.sort_rank
 
     pitch:
@@ -140,7 +139,7 @@ layers:
             - kind: pitch
         draw:
             polygons:
-                color: '#444748'
+                color: '#A88FA8'
                 order: global.sort_rank
 
     hopital:
@@ -151,7 +150,7 @@ layers:
             - kind: hospital
         draw:
             polygons:
-                color: '#46484A'
+                color: '#A88FA8'
                 order: global.sort_rank
 
     cemetery:
@@ -162,7 +161,7 @@ layers:
             - kind: cemetery
         draw:
             polygons:
-                color: '#444748'
+                color: '#A88FA8'
                 order: global.sort_rank
 
     bridge:
@@ -173,7 +172,7 @@ layers:
             - kind: bridge
         draw:
             polygons:
-                color: '#505355'
+                color: '#A88FA8'
                 order: global.sort_rank
 
     zoo:
@@ -189,7 +188,7 @@ layers:
                 - zoo
         draw:
             polygons:
-                color: '#414345'
+                color: '#A88FA8'
                 order: global.sort_rank
 
     religion:
@@ -200,7 +199,7 @@ layers:
             - kind: religion
         draw:
             polygons:
-                color: '#616466'
+                color: '#A88FA8'
                 order: global.sort_rank
 
     industrial:
@@ -217,7 +216,7 @@ layers:
                 - industrial
         draw:
             polygons:
-                color: '#444748'
+                color: '#A88FA8'
                 order: global.sort_rank
 
     farmyard:
@@ -235,7 +234,7 @@ layers:
                 - farmyard
         draw:
             polygons:
-                color: '#616364'
+                color: '#A88FA8'
                 order: global.sort_rank
 
     beach:
@@ -248,7 +247,7 @@ layers:
             - function() { return feature.kind.endsWith ('_site');}
         draw:
             polygons:
-                color: '#5B5E5F'
+                color: '#A88FA8'
                 order: global.sort_rank
 
     aerodrome:
@@ -259,7 +258,7 @@ layers:
             - kind: aerodrome
         draw:
             polygons:
-                color: '#444748'
+                color: '#A88FA8'
                 order: global.sort_rank
 
     runway:
@@ -270,7 +269,7 @@ layers:
             - kind: runway
         draw:
             polygons:
-                color: '#3F4243'
+                color: '#A88FA8'
                 order: global.sort_rank
 
     pier:
@@ -283,7 +282,7 @@ layers:
             - landuse_kind: pier
         draw:
             lines:
-                color: '#333334'
+                color: '#A88FA8'
                 order: global.sort_rank
                 width: [
                         [13, 3],
@@ -310,7 +309,7 @@ layers:
 
         draw:
             lines:
-                color: '#606164'
+                color: '#A88FA8'
                 width: 2
                 order: global.sort_rank
 
@@ -329,7 +328,7 @@ layers:
             background:
                 style: lines
                 order: global.sort_rank
-                color: '#6A6C6F'
+                color: '#A88FA8'
                 width: [
                     [9, 300],
                     [11, 70],
