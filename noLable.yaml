@@ -1,29 +1,20 @@
 sources:
   omv:
     type: OMV
-    max_zoom: 11
+    max_zoom: 17
     min_display_zoom: 1
   # global description of the map, in this example
   # the map background color is white
   scene:
   background:
-    color: global.land_color
-  sky:
-    zenith: '#010205'
-    horizon: '#010205'
-    fog: '#21262B'
+    color: [0.055, 0.604, 0.914, 1.00]
+
   # section contains the style information for the layers
   # that are present on the map
-  global:
-  text_visible_admin: false
-  icon_visible_populated_places: false
-  text_visible_populated_places: false
-  text_visible_neighbourhoods: false
-  text_visible_water_labels: false
-  text_visible_building: false
-  text_visible_address: false
-  text_visible_roads: false
-  text_visible_ferry: false
-  shields_visible: false
+  layers:
+    earth:
+      data: {source: omv, layer: earth}
+        draw:
+          text:
+            visible: false 
 
-  ux_language: en
