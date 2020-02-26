@@ -27,12 +27,3 @@ sources:
   shields_visible: false
 
   ux_language: en
-  layers:
-  earth:
-    data: {source: omv, layer: earth}
-    draw:
-        polygons:
-            order: 100
-            color: #00bfff
-        text:
-            visible: false 
