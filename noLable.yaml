@@ -581,10 +581,14 @@ fonts:
       url: ../fonts/FiraGO-Italic.woff
 
 styles:
+  text:
+    visible: false
   shields:
     base: points
     blend_order: 1
     draw:
+      text:
+        visible: false
       visible: global.shields_visible
       texture: icon_library
       sprite: |
@@ -601,12 +605,10 @@ styles:
       repeat_distance: [[10, 150px],[13, 200px],[20, 70px]]
       placement: midpoint
       placement_min_length_ratio: 0.1
-      text:
-        visible: false
-        anchor: center
+      anchor: center
         # TODO: We must use shield_text instead of ref when using different road shield icons
-        text_source: ref
-        font:
+      text_source: ref
+      font:
           fill: black
           family: global.text_font_family
           weight: 450
@@ -664,6 +666,8 @@ layers:
   earth:
     data: {source: omv, layer: earth}
     draw:
+      text:
+        visible: false
       polygons:
         order: 100
         color: global.land_color
@@ -671,6 +675,8 @@ layers:
     filter: global.feature_min_zoom_filter
     data: {source: omv, layer: landuse}
     draw:
+      text:
+        visible: false
       polygons:
         order: global.feature_order
       lines:
@@ -700,22 +706,12 @@ layers:
         draw:
           text:
             visible: false
-          text-blend-order:
-            font:
-              fill: global.landuse_park_label_color
-              stroke:
-                color: global.landuse_park_label_outline_color
       forest-national-park:
         filter:
           kind: [forest, national_park, nature_reserve]
         draw:
           text:
             visible: false
-          text-blend-order:
-            font:
-              fill: global.landuse_forest_label_color
-              stroke:
-                color: global.landuse_forest_label_outline_color
       pedestrian:
         filter:
           kind: pedestrian
@@ -793,12 +789,12 @@ layers:
           draw:
             icon_library:
               sprite: area-icon-day--sport_complex
-              text:
-                visible: false
-                font:
-                  fill: global.landuse_default_label_color
-                  stroke:
-                    color: global.landuse_default_label_outline_color
+            text:
+              visible: false
+              font:
+                fill: global.landuse_default_label_color
+                stroke:
+                	color: global.landuse_default_label_outline_color
         commercial:
           filter:
             kind: commercial
@@ -962,8 +958,6 @@ layers:
         polygons:
           color: global.green_area_color
     golf:
-      text:
-        visible: false
       filter:
         kind: golf_course
       draw:
@@ -1201,6 +1195,8 @@ layers:
     filter: global.feature_min_zoom_filter
     data: {source: omv, layer: roads}
     draw:
+      text:
+        visible: false
       lines:
         order: 340
         join: round
@@ -1217,6 +1213,8 @@ layers:
           - ref: true
           - global.feature_min_zoom_filter
       draw:
+        text:
+          visible: false
         shields:
           priority: 45
           visible: false
@@ -1224,6 +1222,8 @@ layers:
         filter:
           kind_detail: motorway
         draw:
+          text:
+            visible: false
           shields:
             priority: 40
             visible: global.shields_visible
@@ -1232,6 +1232,8 @@ layers:
           all:
             - kind_detail: trunk
         draw:
+          text:
+            visible: false
           shields:
             priority: 41
             visible: global.shields_visible
@@ -1239,6 +1241,8 @@ layers:
         filter:
           kind_detail: primary
         draw:
+          text:
+            visible: false
           shields:
             priority: 42
             visible: global.shields_visible
@@ -1246,6 +1250,8 @@ layers:
         filter:
           kind_detail: secondary
         draw:
+          text:
+            visible: false
           shields:
             priority: 43
             visible: global.shields_visible
@@ -1253,6 +1259,8 @@ layers:
         filter:
           kind_detail: tertiary
         draw:
+          text:
+            visible: false
           shields:
             priority: 44
             visible: global.shields_visible
@@ -1260,6 +1268,8 @@ layers:
         filter:
           kind: minor_road
         draw:
+          text:
+            visible: false
           shields:
             priority: 45
             visible: global.shields_visible
@@ -1270,6 +1280,8 @@ layers:
           - oneway: yes
           - under_construction: false
       draw:
+        text:
+          visible: false
         points:
           priority: 500
           texture: icon_library
@@ -1294,6 +1306,8 @@ layers:
           - $zoom: {min: 10}
           - global.feature_min_zoom_filter
       draw:
+        text:
+          visible: false
         lines:
           order: global.feature_order
           width: [[15, 1px], [16, 1.5px], [17, 1.5px], [18, 2px], [19, 2.5px]]
@@ -1307,6 +1321,8 @@ layers:
       filter:
         under_construction: true
       draw:
+        text:
+          visible: false
         lines:
           cap: butt
           dash: [2, 2]
@@ -1316,6 +1332,8 @@ layers:
         filter:
           is_bridge: true
         draw:
+          text:
+            visible: false
           bridge:
             cap: butt
             dash: [2, 2]
@@ -1323,6 +1341,8 @@ layers:
       filter:
         kind: highway
       draw:
+        text:
+          visible: false
         lines:
           order: global.feature_order
           color: global.highway_fill
@@ -1345,6 +1365,8 @@ layers:
         filter:
           is_tunnel: true
         draw:
+          text:
+            visible: false
           lines:
             order: global.tunnel_order
             color: global.highway_tunnel_fill
@@ -1355,6 +1377,8 @@ layers:
         filter:
           is_link: true
         draw:
+          text:
+            visible: false
           lines:
             width: global.highway_link_width
           center-lines:
@@ -1604,11 +1628,12 @@ layers:
           lines:
             dash: [10,10]
             color: rgb(153,153,153)
-            dash_background_color: global.ferry_tunnel_color
-
+            dash_background_color: global.ferry_tunnel_colo
   road_labels:
     data: {source: omv, layer: road_labels}
     draw:
+      text:
+        visible: false
       text-blend-order:
         visible: global.text_visible_roads
         text_source: global.ux_language_text_source
@@ -1756,6 +1781,8 @@ layers:
     data: {source: omv, layer: buildings}
     filter: global.feature_min_zoom_filter
     draw:
+      text:
+        visible: false
       translucent-polygons:
         order: global.feature_order
         color: global.building_color
@@ -1821,6 +1848,8 @@ layers:
         - kind: continent
         - global.feature_min_zoom_filter
     draw:
+      text:
+        visible: false
       text-blend-order:
         collide: true
         text_source: global.ux_language_text_source
@@ -1844,6 +1873,8 @@ layers:
         - global.feature_min_zoom_filter
         - name: true
     draw:
+      text:
+        visible: false
       text-blend-order:
         text_source: global.ux_language_text_source
         visible: false
@@ -2258,6 +2289,8 @@ layers:
       kind: island
       $zoom: { min: 0, max: 15}
     draw:
+      text:
+        visible: false
       text-blend-order:
         text_source: global.ux_language_text_source
         priority: 21
@@ -2273,6 +2306,8 @@ layers:
   pois:
     data: {source: omv, layer: pois}
     filter: global.feature_min_zoom_filter
+    text:
+      visible: false
     mountain:
       filter:
         kind: [peak, volcano]
@@ -2280,29 +2315,19 @@ layers:
         icon_library:
           size: 10px
           text:
-            priority: global.feature_order
-            text_source: |
-              function() {
-                return ((global.ux_language && feature['name:' + global.ux_language]) ||
-                  (global.ux_language_fallback && feature['name:'+global.ux_language_fallback]) ||
-                  feature['name']) + ' ('+ feature.elevation +'m)';
-              }
-            text_wrap: 1
-            max_lines: 5
-            anchor: top
-            font:
-              fill: global.peak_label_color
-              stroke:
-                width: 1px
-                color: global.peak_label_outline_color
-              size: 10px
+            visible: false
       peak:
         filter: {kind: peak}
         draw:
+          text:
+            visible: false
           icon_library:
             sprite: mountain-peak--mountain
       volcano:
         filter: {kind: volcano}
         draw:
+          text:
+            visible: false
           icon_library:
             sprite: mountain-peak--volcano
+
