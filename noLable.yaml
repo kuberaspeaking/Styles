@@ -620,6 +620,7 @@ styles:
       sprite_default: generic
       buffer: 3px
       text:
+        visible: false
         text_source: global.ux_language_text_source
         anchor: [top-right, top-left, bottom-right, bottom-left, top, bottom]
         buffer: 3px
@@ -679,6 +680,8 @@ layers:
         all:
          - $geometry: point
       draw:
+        text:
+          visible: false
         text-blend-order:
           text_source: global.ux_language_text_source
           priority: global.feature_order
@@ -695,6 +698,8 @@ layers:
         filter:
           kind: park
         draw:
+          text:
+            visible: false
           text-blend-order:
             font:
               fill: global.landuse_park_label_color
@@ -704,6 +709,8 @@ layers:
         filter:
           kind: [forest, national_park, nature_reserve]
         draw:
+          text:
+            visible: false
           text-blend-order:
             font:
               fill: global.landuse_forest_label_color
@@ -713,6 +720,8 @@ layers:
         filter:
           kind: pedestrian
         draw:
+          text:
+            visible: false
           text-blend-order:
             font:
               fill: global.landuse_pedestrian_label_color
@@ -722,6 +731,8 @@ layers:
         filter:
           kind: beach
         draw:
+          text:
+            visible: false
           text-blend-order:
             font:
               fill: global.landuse_beach_label_color
@@ -731,6 +742,8 @@ layers:
         filter:
           kind: military
         draw:
+          text: 
+            visible: false
           text-blend-order:
             font:
               fill: global.landuse_military_label_color
@@ -740,6 +753,8 @@ layers:
         filter:
           kind: [railway, parking]
         draw:
+          text:
+            visible: false
           text-blend-order:
             font:
               fill: global.landuse_gray_label_color
@@ -749,6 +764,8 @@ layers:
         filter:
           kind: industrial
         draw:
+          text:
+            visible: false
           text-blend-order:
             font:
               fill: global.landuse_industrial_label_color
@@ -758,6 +775,8 @@ layers:
         filter:
           kind: [sports_centre, commercial, zoo, theme_park, hospital, aerodrome, golf_course, university]
         draw:
+          text:
+            visible: false
           icon_library:
             priority: global.feature_order
             text:
@@ -775,6 +794,7 @@ layers:
             icon_library:
               sprite: area-icon-day--sport_complex
               text:
+                visible: false
                 font:
                   fill: global.landuse_default_label_color
                   stroke:
@@ -786,6 +806,7 @@ layers:
             icon_library:
               sprite: area-icon-day--shopping_complex
               text:
+                visible: false
                 font:
                   fill: global.landuse_gray_label_color
                   stroke:
@@ -797,6 +818,7 @@ layers:
             icon_library:
               sprite: area-icon-day--animal_park
               text:
+                visible: false
                 font:
                   fill: global.landuse_gray_label_color
                   stroke:
@@ -808,6 +830,7 @@ layers:
             icon_library:
               sprite: area-icon-day--amusement_park
               text:
+                visible: false
                 font:
                   fill: global.landuse_gray_label_color
                   stroke:
@@ -819,6 +842,7 @@ layers:
             icon_library:
               sprite: area-icon-day--hospital_complex
               text:
+                visible: false
                 font:
                   fill: global.landuse_hospital_label_color
                   stroke:
@@ -830,6 +854,7 @@ layers:
             icon_library:
               sprite: area-icon-day--transport_airport
               text:
+                visible: false
                 font:
                   fill: global.landuse_gray_label_color
                   stroke:
@@ -841,6 +866,7 @@ layers:
             icon_library:
               sprite: area-icon-day--golf_course
               text:
+                visible: false
                 font:
                   fill: global.landuse_golf_course_label_color
                   stroke:
@@ -852,6 +878,7 @@ layers:
             icon_library:
               sprite: area-icon-day--university_campus
               text:
+                visible: false
                 font:
                   fill: global.landuse_university_label_color
                   stroke:
@@ -860,48 +887,64 @@ layers:
       filter:
         kind: [wood, natural_wood, wetland]
       draw:
+        text:
+          visible: false
         polygons:
           color: global.woodland_color
     forest:
       filter:
         kind: [forest, natural_forest]
       draw:
+        text:
+          visible: false
         polygons:
           color: global.forest_color
     park:
       filter:
         kind: [park, grass]
       draw:
+        text:
+          visible: false
         polygons:
           color: global.park_color
     national_park:
       filter:
         kind: national_park
       draw:
+        text:
+          visible: false
         polygons:
           color: global.national_park_color
     nature_reserve:
       filter:
         kind: nature_reserve
       draw:
+        text:
+          visible: false
         polygons:
           color: global.native_reservation_color
     glacier:
       filter:
         kind: glacier
       draw:
+        text:
+          visible: false
         polygons:
           color: global.glacier_color
     beach:
       filter:
         kind: beach
       draw:
+        text:
+          visible: false
         polygons:
           color: global.beach_color
     builtup:
       filter:
         kind: [urban_area, urban, residential]
       draw:
+        text:
+          visible: false
         polygons:
           color: global.builtup_area_color
         lines:
@@ -914,59 +957,81 @@ layers:
       filter:
         kind: [zoo, pitch, allotments, amusement_ride, theme_park, animal, sports_centre, stadium, playground, recreation-ground, recreation_track, cemetery, grave_yard]
       draw:
+        text:
+          visible: false
         polygons:
           color: global.green_area_color
     golf:
+      text:
+        visible: false
       filter:
         kind: golf_course
       draw:
+        text:
+          visible: false
         polygons:
           color: global.golf_course_color
     hospital:
       filter:
         kind: hospital
       draw:
+        text:
+          visible: false
         polygons:
           color: global.hospital_color
     university:
       filter:
         kind: [university, college]
       draw:
+        text:
+          visible: false
         polygons:
           color: global.university_campus_color
     military:
       filter:
         kind: military
       draw:
+        text:
+          visible: false
         polygons:
           color: global.military_color
     pedestrian:
       filter:
         kind: pedestrian
       draw:
+        text:
+          visible: false
         polygons:
           color: global.pedestrian_area_color
     runway:
       filter:
         kind: runway
       draw:
+        text:
+          visible: false
         polygons:
           color: global.runway_color
     aerodrome:
       filter:
         kind: aerodrome
       draw:
+        text:
+          visible: false
         polygons:
           color: global.aerodrome_color
     other:
       filter:
         kind: [industrial, railway, commercial, bridge, parking]
       draw:
+        text:
+          visible: false
         polygons:
           color: global.industrial_color
   water:
     data: {source: omv, layer: water}
     draw:
+      text:
+        visible: false
       polygons:
         order: global.feature_order
         color: global.water_color
@@ -974,6 +1039,8 @@ layers:
       filter:
         kind: [basin, lake, dock, playa, riverbank]
       draw:
+        text:
+          visible: false
         polygons:
           color: global.water_color
     deep_water:
@@ -982,6 +1049,8 @@ layers:
           - $geometry: polygon
           - kind: [ocean, sea]
       draw:
+        text:
+          visible: false
         polygons:
           color: global.water_deep_color
     river:
@@ -990,6 +1059,8 @@ layers:
           - kind: [river, canal, ditch, drain, stream]
           - $geometry: line
       draw:
+        text:
+          visible: false
         lines:
           order: global.feature_order
           width: [[10, 1px], [13, 2px], [14, 3px], [15, 4px], [16, 7px], [17, 15px], [18, 28px], [20, 46px]]
@@ -1000,6 +1071,8 @@ layers:
         all:
           - name: false
       draw:
+        text:
+          visible: false
         text-blend-order:
           text_source: global.ux_language_text_source
           visible: global.text_visible_water_labels
@@ -1016,6 +1089,8 @@ layers:
             - kind: [ocean] # note enough due to OLPRPS-3988
             - function() {return (feature.name && feature.name.indexOf('Ocean') != -1) || feature['name:en'] && feature['name:en'].indexOf('Ocean') != -1}
         draw:
+          text:
+            visible: false
           text-blend-order:
             text_source: global.ux_language_text_source_ocean
             text_wrap: false
@@ -1030,6 +1105,8 @@ layers:
            - kind: [bay]
            - global.feature_min_zoom_filter
         draw:
+          text:
+            visible: false
           text-blend-order:
             font:
               fill: global.water_label_bay_color
@@ -1043,6 +1120,8 @@ layers:
           - kind: lake
           - global.feature_min_zoom_filter
         draw:
+          text:
+            visible: false
           text-blend-order:
             font:
               fill: global.water_label_lake_color
@@ -1060,6 +1139,8 @@ layers:
     border-labels:
       filter: {$zoom: { min: 8 }}
       draw:
+        text:
+          visible: false
         text-blend-order:
           priority: 2
           visible: global.text_visible_admin
@@ -1075,6 +1156,8 @@ layers:
       no-left-right:
         filter: { "name:left": false, "name:right": false }
         draw:
+          text:
+            visible: false
           text-blend-order:
               text_source: global.ux_language_text_source_boundary_lines
               offset: [0px, 0px]
