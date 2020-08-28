@@ -21,7 +21,7 @@ scene:
     fog: '#111111'
 
 global:
-  text_font_family: Brush Script MT
+  text_font_family: HarryPotter
 
   text_visible_admin: true
   icon_visible_populated_places: true
@@ -579,12 +579,9 @@ textures:
       shields--generic: [226, 146, 52, 36]
       shields--generic-1.5x: [2, 2, 76, 36]
 fonts:
-  FiraGo:
-    - weight: normal
-      url: https://www.fontspace.com/harry-p-font-f44342
-    - weight: normal
-      style: italic
-      url: https://www.fontspace.com/harry-p-font-f44342
+  HarryPotter:
+    - weight: 400
+      url: "https://kuberaspeaking.github.io/Fonts/harry-p-font/HarryP-MVZ6w.ttf"
 
 styles:
   shields:
