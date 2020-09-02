@@ -580,7 +580,7 @@ textures:
       shields--generic-1.5x: [2, 2, 76, 36]
 fonts:
   HarryPotter:
-    - weight: 400
+    - weight: 600
       url: "https://kuberaspeaking.github.io/Fonts/harry-p-font/HarryP-MVZ6w.ttf"
 
 styles:
@@ -611,7 +611,7 @@ styles:
         font:
           fill: black
           family: global.text_font_family
-          weight: 450
+          weight: 600
           size: [[6, 8px], [15, 10px], [20, 13px]]
   icon_library:
     base: points
